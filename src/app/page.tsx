@@ -1,5 +1,6 @@
 "use client"
 
+import '@/app/globals.css';
 import { useEffect, useState } from 'react';
 
 type Post = {
