@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import Image from "next/image";
+import Logo from "@/../../public/logo.png";
 import default_avatar from "@/../../public/default_avatar.png";
 
 interface User {
@@ -62,19 +63,25 @@ export default function Navbar() {
     <div className="bg-black text-white p-4 flex justify-between items-center">
       <div className="text-xl font-bold">
         <Link href="/">
-          <h1>Logo</h1>
+          <Image
+            src={Logo}
+            alt="Logo"
+            width={130}
+            height={130}
+            className="cursor-pointer">
+          </Image>
         </Link>
       </div>
       <div className="flex space-x-6 items-center">
         <Link href="/posts">
           <h1 className="hover:underline">Innlegg</h1>
         </Link>
-        <Link href="/nyheter">
+        {/* <Link href="/nyheter">
           <h1 className="hover:underline">Nyheter</h1>
         </Link>
         <Link href="/prosjekter">
           <h1 className="hover:underline">Prosjekter</h1>
-        </Link>
+        </Link> */}
 
         {/* Show "Admin Panel" only if user is an admin */}
         {role === "admin" && (

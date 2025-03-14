@@ -48,7 +48,7 @@ export default function Home() {
           >
             <div className="flex-1 flex flex-col justify-start">
               <h2 className="text-xl">{post.title}</h2>
-              <p>{post.description}</p>
+              <p className='overflow-hidden'>{post.description}</p>
             </div>
             {post.content && post.contentType?.startsWith("image") && (
               <div className="flex h-full">

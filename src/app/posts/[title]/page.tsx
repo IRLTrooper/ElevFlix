@@ -168,19 +168,19 @@ export default function PostDetails() {
             name="title"
             value={updatedPost?.title || ""}
             onChange={handleChange}
-            className="block w-full p-2 text-black"
+            className="block w-full p-2 text-white"
           />
           <textarea
             name="description"
             value={updatedPost?.description || ""}
             onChange={handleChange}
-            className="block w-full p-2 text-black mt-2"
+            className="block w-full p-2 text-white mt-2"
           />
           <textarea
             name="mainContent"
             value={updatedPost?.mainContent || ""}
             onChange={handleChange}
-            className="block w-full p-2 text-black mt-2"
+            className="block w-full p-2 text-white mt-2"
           />
 
           <input type="file" accept="image/*" onChange={handleImageChange} className="mt-4" />
@@ -193,8 +193,8 @@ export default function PostDetails() {
         </div>
       ) : (
         <div>
-          <h1 className="text-2xl font-bold">{post.title}</h1>
-          <p className="mt-4">{post.description}</p>
+          <h1 className="text-2xl font-bold text-white">{post.title}</h1>
+          <p className="mt-4 text-white">{post.description}</p>
 
           {post.content && post.contentType?.startsWith("image") && (
             <img src={`${post.content}?t=${new Date().getTime()}`} alt={post.title} className="mt-2 max-w-full max-h-64 object-contain" />

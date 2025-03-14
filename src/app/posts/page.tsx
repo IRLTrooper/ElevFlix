@@ -106,7 +106,7 @@ export default function CreatePost() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center p-6">
-      <h1 className="text-2xl font-bold mb-4">Create a Post</h1>
+      <h1 className="text-2xl font-bold mb-4">Lag et Innlegg</h1>
       <form className="w-full max-w-lg flex flex-col space-y-4" onSubmit={handleSubmit}>
         <input
           type="text"
